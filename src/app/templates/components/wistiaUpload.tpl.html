@@ -1,0 +1,22 @@
+<div class="wistia-wrapper">
+	<div class="message" data-ng-if="!!wistia.state.message.text" data-ng-bind="wistia.state.message.text"
+			 data-ng-class="wistia.state.message.cssClass"></div>
+
+	<input id="fileupload" class="dropzone__input" type="file" name="file">
+
+	<div class="wistia-wrapper__upload" data-ng-if="!wistia.state.video.isUploading">
+	  <label for="fileupload" class="upload__dropzone">
+	    <div class="dropzone__tip">
+	    	<i class="fa fa-upload dropzone__icon"></i>
+	    	<div>Choose a file or drop here...</div>
+	    </div>
+	  </label>
+	</div>
+	<div class="upload__progress-bar" data-ng-if="!!wistia.state.video.isUploading">
+		<div class="upload__progress-value" data-ng-style="{'width': wistia.state.video.value + '%'}"></div>
+	</div>
+	<iframe class="upload__video" width="{{ wistia.state.video.width }}" frameborder="0" height="{{ wistia.state.video.height }}"
+					data-ng-if="!!wistia.state.video.isUploaded && !wistia.state.video.isUploading" data-ng-src="{{ wistia.state.video.url }}">
+	</iframe>
+
+</div>

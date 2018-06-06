@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="wistia">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Wistia Upload</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!--<link rel="apple-touch-icon" href="apple-touch-icon.png">-->
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="dist/css/style.css">
+</head>
+<body data-ng-controller="HomeController as ctrl">
+
+  <div class="holder">
+    <wistia-upload class="wistia-upload" state="ctrl.state" on-update="ctrl.setState(ctrl.state)"></wistia-upload>
+  </div>
+
+  <script src="libs/jquery/dist/jquery.min.js"></script>
+  <script src="libs/angular/angular.min.js"></script>
+  <script src="libs/blueimp-file-upload/js/vendor/jquery.ui.widget.js"></script>
+  <script src="libs/blueimp-file-upload/js/jquery.fileupload.js"></script>
+  <script src="libs/blueimp-file-upload/js/jquery.iframe-transport.js"></script>
+  <script src="dist/js/app.js"></script>
+</body>
+</html>
